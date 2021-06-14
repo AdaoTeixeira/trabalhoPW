@@ -1,0 +1,51 @@
+{{>navbar}}
+<br>
+<br>
+<br>
+<br>
+
+<form id="registration-form">
+  <div class="modal fade" id="registration-dlg" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Editar Incrição</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">        
+          <div class="form-group">
+              <label for="idregistration" class="control-label">Id de inscrição</label>
+              <input type="text" class="form-control" id="idregistration" />
+          </div>
+              <div class="form-group">
+              <label for="emailRegistration">Email</label>
+              <input type="email" class="form-control" id="emailRegistration"/>
+          </div>
+          <div class="form-group">
+              <label for="nameRegistration" class="control-label">Nome</label>
+              <input type="text" class="form-control" id="nameRegistration" minlength="1"/>
+          </div>
+           <div class="form-group">
+              <label for="registrationtelephone">Telefone</label>
+              <input type="text" class="form-control" id="registrationtelephone"/>
+         </div>
+          <div class="form-group">
+             <label for="ideventfk" class="control-label">Id do evento</label>
+             <select name="ideventfk" class="form-control" id="ideventfk">
+              
+
+             </select>
+          </div>
+         
+        </div>
+        <div class="modal-footer">
+           <button type="submit" class="btn btn-primary" id="registration-save-btn" >Submeter Inscrição</button>
+           <button type="button" class="btn btn-secondary" data-dismiss="modal">Sair</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+  

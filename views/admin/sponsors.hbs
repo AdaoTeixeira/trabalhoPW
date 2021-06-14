@@ -1,0 +1,87 @@
+{{> navbar}}
+<div>
+ <br>
+ <br>
+ <br>
+</div>
+
+<h1>Gestão de Patrocinadores</h1>
+<table class="table table-striped" id="sponsors-table">
+    <thead>
+        <tr>
+            <th scope="col">Id Patrocinador</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Tipo de organização</th>
+            <th scope="col">NIF</th>
+            <th scope="col">Email</th>
+            <th scope="col">Telefone</th>
+            <th scope="col">url do logotipo do patrocinador</th> 
+            
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+<button type="button" class="btn btn" id="refresh-btn">Atualizar</button>
+<button type="button" class="btn btn-primary" id="new-sponsor-btn">Novo Patrocinador</button>
+
+<form id="sponsor-form">
+  <div class="modal fade" id="sponsor-dlg" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Editar Patrocinador</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">        
+          <div class="form-group">
+              <label for="idsponsor" class="control-label">ID Patrocinador</label>
+              <input type="text" class="form-control" id="idsponsor" minlength="1"/>
+          </div>
+          <div class="form-group">
+              <label for="sponsorname" class="control-label">Nome</label>
+              <input type="text" class="form-control" id="sponsorname" minlength="1"/>
+          </div>
+       
+            <div class="form-group">
+             <label for="organizationtype" class="control-label">Tipo de Organização</label>
+             <select name="organizationtype" class="form-control" id="organizationtype">
+               <option value="fundação" > Fundação </option>
+               <option value="publica" > Publica </option>
+               <option value="privada"  selected="selected"> Privada </option>
+               <option value="associação" > Associação </option>
+               <option value="ipss" > IPSS </option>
+             </select>
+          </div>
+
+           <div class="form-group">
+              <label for="sponsornif" class="control-label">NIF</label>
+              <input type="text" class="form-control" id="sponsornif" minlength="1"/>
+          </div>
+          <div class="form-group">
+              <label for="emailsponsor">Email</label>
+              <input type="email" class="form-control" id="emailsponsor"/>
+          </div>
+
+          <div class="form-group">
+              <label for="phonesponsor">Telefone</label>
+              <input type="text" class="form-control" id="phonesponsor" minlength="1"/>
+          </div>     
+
+           <div class="form-group">
+              <label for="urllogosponsor">url do logotipo do patrocinador</label>
+              <input type="file" class="form-control" id="urllogosponsor" />
+           </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" id="sponsor-save-btn">Guardar</button>
+          <button type="button" class="btn btn-danger" id="sponsor-remove-btn">Remover</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Sair</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,85 @@
+{{> navbar}}
+<div>
+ <br>
+ <br>
+  <br>
+  <br>
+ <br>
+</div>
+
+<h1>Gestão de Eventos</h1>
+<table class="table table-striped" id="events-table">
+    <thead>
+        <tr>
+            <th scope="col">Id do Evento</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Local</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">Id Atividade</th>
+            <th scope="col">Valor de inscrição</th>
+            <th scope="col">url da imagem do evento</th> 
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+<button type="button" class="btn btn" id="refresh-btn">Atualizar</button>
+<button type="button" class="btn btn-primary" id="new-event-btn">Novo Evento</button>
+
+<form id="event-form">
+  <div class="modal fade" id="event-dlg" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Editar Evento</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">        
+          <div class="form-group">
+              <label for="idevent" class="control-label">Id Evento</label>
+              <input type="text" class="form-control" id="idevent" />
+          </div>
+           <div class="form-group">
+              <label for="eventname" class="control-label">Nome</label>
+              <input type="text" class="form-control" id="eventname" minlength="1"/>
+          </div>
+          <div class="form-group">
+              <label for="venue">Local</label>
+              <input type="text" class="form-control" id="venue" minlength="1"/>
+          </div>
+
+          <div class="form-group">
+              <label for="description">Descrição</label>
+              <input type="text" class="form-control" id="description" minlength="10"/>
+          </div>
+
+          <div class="form-group">
+             <label for="fkactivities" class="control-label">ID da Atividade</label>
+             <select name="fkactivities" class="form-control" id="fkactivities"></select> 
+                   
+             </select>
+             </div>
+
+          <div class="form-group">
+              <label for="eventfee">Valor de inscrição</label>
+              <input type="number" class="form-control" id="eventfee" min="0" min="0.00" max="2500.00" value="00.00" />
+          </div>
+          <div class="form-group">
+              <label for="eventimage">url da imagem do evento</label>
+              <input type="url" class="form-control" id="eventimage" />
+          </div>
+         
+
+
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" id="event-save-btn">Guardar</button>
+          <button type="button" class="btn btn-danger" id="event-remove-btn">Remover</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Sair</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

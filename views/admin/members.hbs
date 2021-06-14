@@ -1,0 +1,90 @@
+{{> navbar}}
+<div>
+ <br>
+ <br>
+ <br>
+  <br>
+  <br>
+</div>
+
+<h1>Gestão de Sócios</h1>
+<table class="table table-striped" id="members-table">
+    <thead>
+        <tr>
+            <th scope="col">Nr de sócio</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Email</th>
+            <th scope="col">Morada</th>
+            <th scope="col">Cidade</th>
+            <th scope="col">Telefone</th>
+            <th scope="col">Data de inscrição</th>
+            <th scope="col">Cargo de direção</th>
+            <th scope="col">url da fotografia</th>  
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+<button type="button" class="btn btn" id="refresh-btn">Atualizar</button>
+<button type="button" class="btn btn-primary" id="new-member-btn">Novo Sócio</button>
+
+<form id="member-form" enctype="multipart/form-data">
+  <div class="modal fade" id="member-dlg" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Editar Sócio</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">        
+          <div class="form-group">
+              <label for="idmember" class="control-label">Nr de sócio</label>
+              <input type="text" class="form-control" id="idmember" minlength="1"/>
+          </div>
+           <div class="form-group">
+              <label for="name" class="control-label">Nome</label>
+              <input type="text" class="form-control" id="name" minlength="1"/>
+          </div>
+          <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email"/>
+          </div>
+          <div class="form-group">
+              <label for="address">Morada</label>
+              <input type="text" class="form-control" id="address" minlength="1"/>
+          </div>
+
+          <div class="form-group">
+              <label for="city">Cidade</label>
+              <input type="text" class="form-control" id="city" minlength="4"/>
+          </div>
+          <div class="form-group">
+              <label for="phonenr">Telefone</label>
+              <input type="text" class="form-control" id="phonenr" minlength="4"/>
+          </div>
+          <div class="form-group">
+              <label for="subscriptiondate">Data de inscrição</label>
+              <input id="subscriptiondate" type="date" class="form-control"  value="2017-06-01">
+          </div>
+          <div class="form-group">
+              <label for="boardposition">Cargo direção</label>
+              <input type="number" class="form-control" id="boardposition" min="1"/>
+          </div>
+
+          <div class="form-group"
+                id='uploadForm' action='http://localhost:3000/upload' method='post' encType="multipart/form-data">
+               <label for="photourl">Fotografia</label>
+              <input type="file" class="form-control" id="photourl" name="sampleFile"/>
+          </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" id="member-save-btn">Guardar</button>
+          <button type="button" class="btn btn-danger" id="member-remove-btn">Remover</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Sair</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

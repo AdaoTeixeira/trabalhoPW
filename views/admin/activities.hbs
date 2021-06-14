@@ -1,0 +1,56 @@
+
+{{> navbar}}
+<div>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+</div>
+
+
+<h1>Gestão de Atividades</h1>
+<table class="table table-striped" id="activities-table">
+    <thead>
+        <tr>
+            <th scope="col">Id da Atividade</th>
+            <th scope="col">Nome</th>
+            
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+<button type="button" class="btn btn" id="refresh-btn">Atualizar</button>
+<button type="button" class="btn btn-primary" id="new-activity-btn">Nova Atividade</button>
+
+<form id="activity-form">
+  <div class="modal fade" id="activity-dlg" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Editar Atividade</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">        
+          <div class="form-group">
+              <label for="idactivity" class="control-label">Id atividade</label>
+              <input type="text" class="form-control" id="idactivity" minlength="1"/>
+          </div>
+          <div class="form-group">
+              <label for="activityname" class="control-label">Nome</label>
+              <input type="text" class="form-control" id="activityname" minlength="1"/>
+          </div>
+         
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" id="activity-save-btn">Guardar</button>
+          <button type="button" class="btn btn-danger" id="activity-remove-btn">Remover</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Sair</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

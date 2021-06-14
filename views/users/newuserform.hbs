@@ -1,0 +1,36 @@
+
+{{> navbar}}
+<div>
+ <br>
+ <br>
+ <br>
+</div>
+<h1>Efetue o seu Registro</h1>
+<form id="user-form">
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input type="text" class="form-control" id="username" placeholder="Username">
+  </div>
+
+  <div class="form-group">
+    <label for="nameUser">Nome</label>
+    <input type="text" class="form-control" id="nameUser" placeholder="Nome">
+  </div>
+
+  <div class="form-group">
+    <label for="emailUser">Email address</label>
+    <input type="email" class="form-control" id="emailUser" aria-describedby="emailHelp" placeholder="Coloque o email">
+    <small id="emailHelp" class="form-text text-muted">O seu email nunca será usado sem a sua premissão.</small>
+  </div>
+ 
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" class="form-control" id="password" placeholder="Password">
+    <label for="check-password">Repete password</label>
+    <input type="password" class="form-control" id="check-passwordUser" placeholder="Password" />
+  </div>
+
+
+  <button type="submit" class="btn btn-primary" id="user-save-btn">Submeter</button>
+  <a class="btn btn-primary" href="/"> Sair</a>
+</form>

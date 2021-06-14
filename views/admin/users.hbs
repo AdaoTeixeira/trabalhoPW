@@ -1,0 +1,84 @@
+
+{{> navbar}}
+<div>
+ <br>
+ <br>
+ <br>
+  <br>
+  <br>
+</div>
+
+
+<h1>Gestão de Utilizadores</h1>
+<table class="table table-striped" id="users-table">
+    <thead>
+        <tr>
+            <th scope="col">Username</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Email</th>
+            <th scope="col">Permissões de Utilizador</th> 
+            <th scope="col">Estado</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+<button type="button" class="btn btn" id="refresh-btn">Atualizar</button>
+<button type="button" class="btn btn-primary" id="new-user-btn">Novo Utilizador</button>
+
+<form id="user-form">
+  <div class="modal fade" id="user-dlg" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Editar Utilizador</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">        
+          <div class="form-group">
+              <label for="username" class="control-label">Username</label>
+              <input type="text" class="form-control" id="username" minlength="2"/>
+          </div>
+          <div class="form-group">
+              <label for="nameUser" class="control-label">Nome</label>
+              <input type="text" class="form-control" id="nameUser" minlength="1"/>
+          </div>
+          <div class="form-group">
+              <label for="emailUser">Email</label>
+              <input type="email" class="form-control" id="emailUser"/>
+          </div>
+          <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password"/>
+              <label for="check-password">Repete password</label>
+              <input type="password" class="form-control" id="check-password" />
+          </div>
+          <div class="form-group">
+             <label for="type" class="control-label">Permissões de Utilizador</label>
+             <select name="type" class="form-control" id="type">
+               <option value="admin" > administrador </option>
+               <option value="user"  selected="selected"> utilizador </option>
+               <option value="contributor" > colaborador </option>
+             </select>
+          </div>
+          <div class="form-group">
+           <label for="estado" class="control-label">Estado</label>
+            <select name="estado" class="form-control" id="estado">
+              <option value="inactive" selected="selected"> inativo </option>
+               <option value="active" > ativo </option>
+             </select>
+           </div>
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" id="user-save-btn">Guardar</button>
+          <button type="button" class="btn btn-danger" id="user-remove-btn">Remover</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Sair</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
